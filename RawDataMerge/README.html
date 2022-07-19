@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Export History</title>
+<style>
+	body{margin:0; padding:0; font-family:sans-serif; font-size:13px; line-height:19px; background:#F3F3F3;}
+	*{box-sizing:border-box;}
+	#header{background:#6F9ABC; display:inline-block; width:100%; margin-bottom:20px; color:white; padding:20px; font-size:22px; color:#fff; font-weight:bold; float:left;}
+	#wrapper{width:650px; margin:20px auto;}
+	.content{width:100%; padding:20px; border:1px solid #CDCDCD; border-top:none; background:#fff;}
+        .cb-highlight{border:1px solid #cce1f6;padding:1% 2%;background-color: #eaf4fd;border-radius: 3px;box-sizing: border-box;-webkit-border-radius: 3px;position: relative;margin: 0 0 5px;}
+	.cb-highlight > p{margin: 0;}
+        table{width:100%; border: 1px solid #E0E0E0; border-spacing:0;}
+	table td{border-bottom: 1px solid #E0E0E0; padding:5px;}
+	table td.label{width:160px;}
+</style>
+</head>
+<body>
+
+<div id="wrapper">
+	<div id="header">Chargebee</div>
+	<div class="content">
+		<h1>Customers Export</h1>
+                <div class="cb-highlight note"><p>Data in the exported files are <b>comma separated</b> and use the <b>double quote</b> (") character as the delimiter.</p>
+                    <p><b>Note:</b> Not all columns present in the exported files are explained here.</p></div>
+                
+		<h3>Customers.csv</h3>
+                <table>
+                    
+                    <tr>
+                        <td class="label">Email</td>
+                        <td>Email of the customer. Configured email notifications will be sent to this email.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Billing Address Line1</td>
+                        <td>Address line 1</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Billing Address Line2</td>
+                        <td>Address line 2</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Billing Address City</td>
+                        <td>The name of the city.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Billing Address State</td>
+                        <td>State or Province</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Billing Address Country</td>
+                        <td>The billing address country of the customer. Must be one of <a href="https://www.iso.org/iso-3166-country-codes.html" target="_blank" rel="noopener noreferrer">ISO 3166 alpha-2 country code</a>.
+<br><br>
+<strong>Note</strong>: If you enter an invalid country code, the system will return an error.<br></br>
+<div class="alert alert-info">
+    <p><strong>Brexit</strong></p>
+    <p>
+        If you have enabled <a rel="noopener noreferrer" target="_blank" href="https://www.chargebee.com/docs/eu-vat.html">EU VAT</a> in 2021 or later, or have <a href="https://www.chargebee.com/docs/brexit.html#what-needs-to-be-done-in-chargebee" target="_blank" rel="noopener noreferrer">manually enable</a> the Brexit configuration, then <code>XI</code> (the code for <strong>United Kingdom – Northern Ireland</strong>) is available as an option.
+    </p>
+</div></td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Billing Address Zip</td>
+                        <td>Zip or postal code. The number of characters is validated according to the rules <a href="https://i18napis.appspot.com/address" target="_blank" rel="noopener noreferrer">specified here</a>.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Offline payment method</td>
+                        <td>The preferred offline payment method for the customer.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Card Status</td>
+                        <td>Current status of the card.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Created At</td>
+                        <td>Timestamp indicating when this customer resource is created.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Billing Address State Code</td>
+                        <td>The <a href="https://www.iso.org/obp/ui/#search" target="_blank">ISO 3166-2 state/province code</a> without the country prefix. Currently supported for USA, Canada and India. For instance, for Arizona (USA), set <code>state_code</code> as <code>AZ</code> (not <code>US-AZ</code>). For Tamil Nadu (India), set as <code>TN</code> (not <code>IN-TN</code>). For British Columbia (Canada), set as <code>BC</code> (not <code>CA-BC</code>).</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Customer Portal Status</td>
+                        <td>Status of the customer portal.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Net Term Days</td>
+                        <td>The number of days within which the customer has to make payment for the invoice. <span isMicro='true' featureId='cb-net-d-payment-terms'></span></td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Taxability</td>
+                        <td>Specifies if the customer is liable for tax</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Locale</td>
+                        <td>Determines which region-specific language Chargebee uses to communicate with the customer. In the absence of the locale attribute, Chargebee will use your site's default language for customer communication.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Billing Address First Name</td>
+                        <td>The first name of the billing contact.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Billing Address Last Name</td>
+                        <td>The last name of the billing contact.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Billing Address Email</td>
+                        <td>The email address.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Billing Address Company</td>
+                        <td>The company name.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Billing Address Phone</td>
+                        <td>The phone number.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Billing Address Line3</td>
+                        <td>Address line 3</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Billing Address Validation Status</td>
+                        <td>The address verification status.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Is Location Valid</td>
+                        <td>Customer location is validated based on IP address and Card issuing country. If the location is valid, it returns True. If not, it returns False. Applicable only for EU, New Zealand and Australia.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">VAT Number Status</td>
+                        <td>Represents the VAT validation status. This is applicable if you have configured EU, UK or Australian taxes and the <a href="https://www.chargebee.com/docs/2.0/uk-vat.html#uk-vat-validation" rel="noopener noreferrer" target="_blank">VAT number validation</a> is enabled.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">VAT Number Validated Time</td>
+                        <td>VAT number recently got validated time</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Auto Close Invoice</td>
+                        <td>Override for this customer, the <a href="https://www.chargebee.com/docs/2.0/metered_billing.html#configuring-metered-billing" rel="noopener noreferrer" target="_blank">site-level setting</a> for auto-closing invoices. Only applicable when auto-closing invoices has been enabled for the site. This attribute is also available at the <a href="/docs/api/subscriptions?prod_cat_ver=2#subscription_auto_close_invoices">subscription level</a> which takes precedence.</td>
+                    </tr>
+                    
+                </table>
+                
+                
+		<h3>CustomerComments.csv</h3>
+                <table>
+                    
+                    <tr>
+                        <td class="label">Customer Id</td>
+                        <td>Identifier of the customer.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Comment Id</td>
+                        <td>Unique identifier for the comment.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Notes</td>
+                        <td>Actual notes for the comment.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Type</td>
+                        <td>Type of comment this is.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Created At</td>
+                        <td>The time at which this comment was created</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Added By</td>
+                        <td>The user who created the comment. If created via API, this contains the name given for the API key used.</td>
+                    </tr>
+                    
+                </table>
+                
+                
+		<h3>CustomerBalances.csv</h3>
+                <table>
+                    
+                    <tr>
+                        <td class="label">Customer Id</td>
+                        <td>Identifier of the customer.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Promotional Credits</td>
+                        <td>Promotional credits balance of this customer.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Excess Payments</td>
+                        <td>Total unused payments associated with the customer.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Refundable Credits</td>
+                        <td>Refundable credits balance of this customer</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="label">Unbilled Charges</td>
+                        <td>Total unbilled charges for this customer.</td>
+                    </tr>
+                    
+                </table>
+                
+                
+	</div>
+</div>
+</body>
+</html>
