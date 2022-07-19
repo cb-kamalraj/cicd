@@ -1,10 +1,7 @@
 import csv
 from _datetime import datetime
-from JenkinsParams import params
 import os
 import shutil
-
-jo = params
 DATE = datetime.now()
 DATE.strftime("%m-%d-%Y-%H-%M-%S")
 
@@ -16,6 +13,7 @@ def customers_merge(client_name, unzipped_folder, validationType, Merge_Results_
     results_path = Merge_Results_Path+ "/" + client_name
     if not os.path.exists(results_path):
         os.mkdir(results_path)
+        print(results_path)
     if validationType == 'DS1' and (not os.path.exists(results_path+ "/" + 'DS1')):
         os.mkdir(results_path+ "/" + 'DS1')
     elif validationType == 'DS3' and (not os.path.exists(results_path+ "/" + 'DS3')):
