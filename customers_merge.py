@@ -8,7 +8,6 @@ DATE.strftime("%m-%d-%Y-%H-%M-%S")
 # cust_folder = "/Users/cb-kamal/Documents/MigrationQAFramework/QA_Framework_New/TestData/RawData/Customers/"
 
 
-
 def customers_merge(client_name, unzipped_folder, validationType, Merge_Results_Path):
     results_path = Merge_Results_Path+ "/" + client_name
     if not os.path.exists(results_path):
@@ -31,4 +30,4 @@ def customers_merge(client_name, unzipped_folder, validationType, Merge_Results_
             writer.writerow(final_header)
             for row in reader:
                 writer.writerow(row)
-    print("Removed spaces in column names and file is ready..")
+    print("Removed spaces in column names and customer merged file is ready..")
