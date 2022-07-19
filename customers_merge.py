@@ -1,7 +1,9 @@
 import csv
+import sys
 from _datetime import datetime
 import os
 import shutil
+sys.path.append(os.environ['WORKSPACE'])
 DATE = datetime.now()
 DATE.strftime("%m-%d-%Y-%H-%M-%S")
 
