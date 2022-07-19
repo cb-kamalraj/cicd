@@ -1,10 +1,9 @@
 import os
 input1 = os.getenv("email_recipients")
-input2 = os.getenv("Validations")
-Dropdown = os.getenv("Dropdown")
-Dropdown2 = os.getenv("dropdown2")
+Validation = os.getenv("Validations")
+DS1FilePath = os.getenv("DS1FilePath")
+
 
 print(input1)
-print(input2)
-print(input1)
-print(input1)
+print(Validation)
+print(DS1FilePath)
