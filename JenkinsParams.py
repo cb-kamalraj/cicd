@@ -11,9 +11,9 @@ def jenkins_read():
         DS1_zip_files = os.getenv("DS1_zip_Files")
         DS3_zip_files = os.getenv("DS3_zip_Files")
         Merge_Results_Path = os.getenv("Merge_Results_Path")
-        # ClientName = 'JENKINS_TEST'
+        # ClientName = 'FRESH_JENKINS'
         # DS1_zip_files = '/Users/cb-kamal/Downloads/customers_ganesh-test_19_Jul_2022_15_07_13.zip,'
-        # DS3_zip_files = '/Users/cb-kamal/Downloads/customers_ganesh-test_19_Jul_2022_15_07_13.zip,'
+        # DS3_zip_files = '/Users/cb-kamal/Downloads/customers_theargonauts-test_15_Jul_2022_08_48_56.zip,'
         # Merge_Results_Path = '/Users/cb-kamal/Downloads'
 
         DS1_zip_files = DS1_zip_files.split(',')

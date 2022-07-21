@@ -12,6 +12,7 @@ DATE.strftime("%m-%d-%Y-%H-%M-%S")
 
 def customers_merge(client_name, unzipped_folder, validationType, Merge_Results_Path):
     results_path = Merge_Results_Path+ "/" + client_name
+    print(results_path)
     if not os.path.exists(results_path):
         os.mkdir(results_path)
         print(results_path)
